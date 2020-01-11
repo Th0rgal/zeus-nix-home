@@ -8,7 +8,7 @@ let
     pygame
     pillow
     requests
-    (pkgs.callPackage ./discordpy.nix)
+    (callPackage ./discordpy.nix { })
   ];
   python-with-my-packages = python3.withPackages my-python-packages;
 in
