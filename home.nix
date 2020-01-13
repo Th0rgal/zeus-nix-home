@@ -31,7 +31,10 @@ in
       # FONTS
       powerline-fonts roboto siji (import ./termsyn.nix) source-code-pro dejavu_fonts noto-fonts-emoji
       # GAMES
-      bastet multimc tigervnc
+      bastet multimc
+      # CONNEXION
+      (callPackage ./anydesk.nix { })
+      tigervnc
     ];
 
     programs = {
