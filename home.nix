@@ -4,6 +4,8 @@ with pkgs;
 let
   my-python-packages = python-packages: with python-packages; [
     aiohttp
+    aiohttp-jinja2
+    faker
     pywal
     pygame
     pillow
@@ -21,17 +23,17 @@ in
     home.packages = with pkgs; [
       # TERMINAL
       (import ./alacritty-master.nix) # Till they fix the background_opacity bug
-      gotop htop neofetch cava zip unrar unzip xorg.xev scrot tree
+      gotop htop neofetch cava zip unrar unzip xorg.xev escrotum xclip tree
       aria2 imagemagick feh
       # DEVELOPMENT
-      idea.idea-ultimate vscodium (callPackage ./termius.nix { })
+      gradle idea.idea-ultimate vscodium (callPackage ./termius.nix { })
       python-with-my-packages zulu8 rustup gcc m4 gnumake binutils
       # OFFICE
-      discord vlc spotify typora (callPackage ./wpsoffice.nix { }) tor-browser-bundle-bin
+      discord vlc typora spotify (callPackage ./wpsoffice.nix { }) tor-browser-bundle-bin
       # FONTS
       powerline-fonts roboto siji (import ./termsyn.nix) source-code-pro dejavu_fonts noto-fonts-emoji
       # GAMES
-      bastet multimc
+      bastet multimc minecraft
       # CONNEXION
       (callPackage ./anydesk.nix { })
       tigervnc
