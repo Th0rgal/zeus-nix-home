@@ -27,7 +27,7 @@ in
       aria2 imagemagick feh
       # DEVELOPMENT
       gradle idea.idea-ultimate vscodium (callPackage ./termius.nix { })
-      python-with-my-packages zulu8 rustup gcc m4 gnumake binutils
+      nodejs python-with-my-packages zulu8 rustup gcc m4 gnumake binutils
       # OFFICE
       discord vlc typora spotify (callPackage ./wpsoffice.nix { }) tor-browser-bundle-bin
       # FONTS
